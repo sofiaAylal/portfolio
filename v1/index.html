@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio personnel - Page d'accueil">
+    <title>Mon Portfolio - Accueil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="text-center pt-4">
+        <h1 class="site-title display-4">MON PORTFOLIO WEB</h1>
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-top border-bottom border-primary my-3">
+            <div class="container justify-content-center">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item mx-3"><a class="nav-link active" href="index.html">Accueil</a></li>
+                    <li class="nav-item mx-3"><a class="nav-link" href="cv.html">CV</a></li>
+                    <li class="nav-item mx-3"><a class="nav-link" href="resources.html">Ressources</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <section class="presentation cv-category-box animate-fade-in">
+            <h2>Presentation</h2>
+            <p>
+                Bonjour ! Bienvenue sur mon portfolio digital, réalisé uniquement avec des technologies web de base telles que HTML, CSS et Bootstrap.
+            <p>
+                Ce site reflète mon parcours et mes réalisations. N'hésitez pas à explorer les différentes sections pour en apprendre un peu plus !
+            </p>
+
+            <h2>Mon Profil</h2>
+            <p>
+                Découvrez mon <a href="cv.html">CV détaillé</a> avec mon parcours académique, mes compétences techniques, ainsi que mes centres d'intérêt qui enrichissent ma créativité.
+            </p>
+            
+            <h2>Mes Realisations</h2>
+            <p>
+                Consultez la section <a href="resources.html">Ressources</a> pour voir des exemples concrets de mon travail : projets de code, démonstrations vidéo et documents téléchargeables.
+            </p>
+        </section>
+
+        <section class="contact-section-simplified cv-category-box animate-fade-in">
+            <h2>Contactez-moi :</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8"> <form action="#" method="POST" id="contactForm">
+                        
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nom de l'utilisateur :</label>
+                            <input type="text" id="name" name="name" class="form-control" required placeholder="Votre nom">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Adresse e-mail :</label>
+                            <input type="email" id="email" name="email" class="form-control" required placeholder="Votre email">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message :</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" required placeholder="Votre message..."></textarea>
+                        </div>
+
+                        <div class="text-end">
+                            <button type="submit" class="btn btn-primary">Envoyer</button>
+                        </div> 
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-3 border-top mt-5 bg-light">
+        <p class="mb-0">© 2025 Mon Portfolio | Auteur : AYLAL Sofia | Tous droits réservés | <a href="#" class="text-decoration-none">Notice de Confidentialité</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            form.reset(); 
+            alert('Votre message a été "envoyé" (simulé) ! Merci de m\'avoir contacté.');
+        });
+    </script>
+
+</body>
+</html>

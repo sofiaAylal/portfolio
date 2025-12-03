@@ -1,0 +1,164 @@
+/*
+ * style.css
+ * Styles personnalisés pour le Portfolio avec Bootstrap - Thème Rosé.
+ */
+
+ @font-face {
+    font-family: 'Starborn'; /* Police Starborn */
+    src: url('assets/fonts/Starborn.otf') format('opentype'),
+         url('assets/fonts/Starborn.ttf') format('truetype'); /* Formats de secours */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* Améliore les performances de chargement */
+}
+
+/* Définition des variables de couleurs pour le thème */
+:root {
+    --primary-pink: #E91E63;     /* Rose framboise (Accent) */
+    --secondary-pink: #F48FB1;   /* Rose moyen */
+    --background-light: #FFF8F8; /* Fond très léger, presque blanc */
+    --text-dark: #333333;        /* Texte sombre */
+}
+
+/* -------------------- Styles de base -------------------- */
+body {
+    background-color: var(--background-light); 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+/* Styles pour tous les liens */
+a {
+    color: var(--primary-pink); /* Liens en rose */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C2185B; /* Rose plus foncé au survol */
+    text-decoration: underline;
+}
+
+/* -------------------- Header & Navigation -------------------- */
+.site-title {
+    color: var(--text-dark);
+    font-family: 'Starborn', sans-serif;
+    font-weight: normal; /* Poids normal pour Starborn */
+}
+
+/* Appliquer la police Starborn à tous les titres */
+h1, h2/*, h3, h4, h5, h6*/ {
+    font-family: 'Starborn', sans-serif;
+}
+
+/* Couleur rose foncé pour tous les h2 */
+h1, h2 {
+    color: #d96b96 !important; /* Rose foncé harmonieux avec la palette */
+}
+
+/* Ajustement des couleurs de la barre de navigation Bootstrap */
+.navbar {
+    border-color: var(--secondary-pink) !important;
+}
+
+.main-menu .nav-link {
+    color: var(--text-dark) !important;
+    font-weight: 700;
+    text-transform: uppercase; /* Style Adittya : menu en majuscules */
+}
+
+.main-menu .nav-link:hover,
+.main-menu .nav-link.active {
+    color: var(--primary-pink) !important; /* Rose foncé au survol */
+}
+
+/* -------------------- Sections & Contenu -------------------- */
+section {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Ombre pour l'effet de carte */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Bouton principal pour le formulaire */
+.btn-primary {
+    background-color: var(--primary-pink);
+    border-color: var(--primary-pink);
+    text-transform: uppercase;
+}
+.btn-primary:hover {
+    background-color: #C2185B; /* Rose plus foncé au survol */
+    border-color: #C2185B;
+}
+
+/* Boutons de téléchargement */
+.btn-outline-primary {
+    color: var(--primary-pink) !important;
+    border-color: var(--primary-pink) !important;
+}
+.btn-outline-primary:hover {
+    background-color: var(--primary-pink) !important;
+    border-color: var(--primary-pink) !important;
+    color: white !important;
+}
+
+/* -------------------- Styles spécifiques au CV -------------------- */
+/* Conteneurs pour chaque catégorie avec fond blanc et bords arrondis */
+.cv-category-box {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(233, 30, 99, 0.1); /* Bordure légère rose */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cv-category-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cv-section h2 {
+    border-bottom: 2px solid var(--secondary-pink); /* Bordure rose sous les titres */
+    color: var(--text-dark);
+    text-transform: uppercase; /* Titres de section en majuscules */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+.cv-picture img {
+    border: 5px solid var(--secondary-pink) !important; /* Bordure rose pour la photo */
+    border-radius: 5px;
+}
+.cv-section li {
+    color: var(--text-dark); /* Les listes restent lisibles */
+    margin-bottom: 5px;
+}
+
+/* Icônes de technologie */
+.skill-icon {
+    font-size: 1.5em; /* Taille des icônes */
+    color: var(--primary-pink);
+    margin-right: 10px;
+}
+
+/* -------------------- Code Sample -------------------- */
+pre {
+    background-color: #FEEAE2; /* Fond légèrement rosé pour le code */
+    border: 1px solid var(--secondary-pink);
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto; 
+}
+
+/* -------------------- Animation simple (simulation) -------------------- */
+.animate-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
