@@ -1,0 +1,8 @@
+services:
+  - type: static
+    name: portfolio-v2
+    env: static
+    repo: https://github.com/sofiaAylal/portfolio
+    branch: main
+    buildCommand: ""
+    publishPath: v2
